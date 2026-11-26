@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Teste de Teclado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <h1>Teste de Teclado</h1>
+    <p>Pressione qualquer tecla para testar.</p>
+
+    <div class="teclado">
+
+      <!-- Teclado principal -->
+      <section class="principal" aria-label="Teclado principal">
+        <div class="fileira funcoes">
+          <kbd data-tecla="Escape">Esc</kbd>
+          <div class="bloco">
+            <kbd data-tecla="F1">F1</kbd>
+            <kbd data-tecla="F2">F2</kbd>
+            <kbd data-tecla="F3">F3</kbd>
+            <kbd data-tecla="F4">F4</kbd>
+          </div>
+          <div class="bloco">
+            <kbd data-tecla="F5">F5</kbd>
+            <kbd data-tecla="F6">F6</kbd>
+            <kbd data-tecla="F7">F7</kbd>
+            <kbd data-tecla="F8">F8</kbd>
+          </div>
+          <div class="bloco">
+            <kbd data-tecla="F9">F9</kbd>
+            <kbd data-tecla="F10">F10</kbd>
+            <kbd data-tecla="F11">F11</kbd>
+            <kbd data-tecla="F12">F12</kbd>
+          </div>
+        </div>
+
+        <div class="fileira">
+          <kbd data-tecla="Backquote" data-shift="&quot;">'</kbd>
+          <kbd data-tecla="Digit1" data-shift="!">1</kbd>
+          <kbd data-tecla="Digit2" data-shift="@">2</kbd>
+          <kbd data-tecla="Digit3" data-shift="#">3</kbd>
+          <kbd data-tecla="Digit4" data-shift="$">4</kbd>
+          <kbd data-tecla="Digit5" data-shift="%">5</kbd>
+          <kbd data-tecla="Digit6" data-shift="¨">6</kbd>
+          <kbd data-tecla="Digit7" data-shift="&amp;">7</kbd>
+          <kbd data-tecla="Digit8" data-shift="*">8</kbd>
+          <kbd data-tecla="Digit9" data-shift="(">9</kbd>
+          <kbd data-tecla="Digit0" data-shift=")">0</kbd>
+          <kbd data-tecla="Minus" data-shift="_">-</kbd>
+          <kbd data-tecla="Equal" data-shift="+">=</kbd>
+          <kbd data-tecla="Backspace" class="w2">Backspace</kbd>
+        </div>
+
+        <div class="fileira">
+          <kbd data-tecla="Tab" class="w15">Tab</kbd>
+          <kbd data-tecla="KeyQ">Q</kbd>
+          <kbd data-tecla="KeyW">W</kbd>
+          <kbd data-tecla="KeyE">E</kbd>
+          <kbd data-tecla="KeyR">R</kbd>
+          <kbd data-tecla="KeyT">T</kbd>
+          <kbd data-tecla="KeyY">Y</kbd>
+          <kbd data-tecla="KeyU">U</kbd>
+          <kbd data-tecla="KeyI">I</kbd>
+          <kbd data-tecla="KeyO">O</kbd>
+          <kbd data-tecla="KeyP">P</kbd>
+          <kbd data-tecla="BracketLeft" data-shift="`">´</kbd>
+          <kbd data-tecla="BracketRight" data-shift="{">[</kbd>
+          <kbd data-tecla="Backslash" data-shift="}" class="w15">]</kbd>
+        </div>
+
+        <div class="fileira">
+          <kbd data-tecla="CapsLock" class="w175">Caps Lock</kbd>
+          <kbd data-tecla="KeyA">A</kbd>
+          <kbd data-tecla="KeyS">S</kbd>
+          <kbd data-tecla="KeyD">D</kbd>
+          <kbd data-tecla="KeyF" class="guia">F</kbd>
+          <kbd data-tecla="KeyG">G</kbd>
+          <kbd data-tecla="KeyH">H</kbd>
+          <kbd data-tecla="KeyJ" class="guia">J</kbd>
+          <kbd data-tecla="KeyK">K</kbd>
+          <kbd data-tecla="KeyL">L</kbd>
+          <kbd data-tecla="Semicolon">Ç</kbd>
+          <kbd data-tecla="Quote" data-shift="^">~</kbd>
+          <kbd data-tecla="Enter" class="w225">Enter</kbd>
+        </div>
+
+        <div class="fileira">
+          <kbd data-tecla="ShiftLeft" class="w125">Shift</kbd>
+          <kbd data-tecla="IntlBackslash" data-shift="|">\</kbd>
+          <kbd data-tecla="KeyZ">Z</kbd>
+          <kbd data-tecla="KeyX">X</kbd>
+          <kbd data-tecla="KeyC">C</kbd>
+          <kbd data-tecla="KeyV">V</kbd>
+          <kbd data-tecla="KeyB">B</kbd>
+          <kbd data-tecla="KeyN">N</kbd>
+          <kbd data-tecla="KeyM">M</kbd>
+          <kbd data-tecla="Comma" data-shift="&lt;">,</kbd>
+          <kbd data-tecla="Period" data-shift="&gt;">.</kbd>
+          <kbd data-tecla="Slash" data-shift=":">;</kbd>
+          <kbd data-tecla="IntlRo" data-shift="?">/</kbd>
+          <kbd data-tecla="ShiftRight" class="w175">Shift</kbd>
+        </div>
+
+        <div class="fileira">
+          <kbd data-tecla="ControlLeft" class="w125">Ctrl</kbd>
+          <kbd data-tecla="MetaLeft" class="w125">Win</kbd>
+          <kbd data-tecla="AltLeft" class="w125">Alt</kbd>
+          <kbd data-tecla="Space" class="w75">Espaço</kbd>
+          <kbd data-tecla="AltRight" class="w125">Alt Gr</kbd>
+          <kbd data-tecla="ContextMenu" class="w125">Menu</kbd>
+          <kbd data-tecla="ControlRight" class="w125">Ctrl</kbd>
+        </div>
+      </section>
+
+      <!-- Teclas de navegação -->
+      <section class="navegacao" aria-label="Teclas de navegação">
+        <div class="grade tres funcoes">
+          <kbd data-tecla="PrintScreen">PrtSc</kbd>
+          <kbd data-tecla="ScrollLock">ScrLk</kbd>
+          <kbd data-tecla="Pause">Pause</kbd>
+        </div>
+        <div class="grade tres">
+          <kbd data-tecla="Insert">Ins</kbd>
+          <kbd data-tecla="Home">Home</kbd>
+          <kbd data-tecla="PageUp">PgUp</kbd>
+          <kbd data-tecla="Delete">Del</kbd>
+          <kbd data-tecla="End">End</kbd>
+          <kbd data-tecla="PageDown">PgDn</kbd>
+        </div>
+        <div class="grade tres setas">
+          <kbd data-tecla="ArrowUp">↑</kbd>
+          <kbd data-tecla="ArrowLeft">←</kbd>
+          <kbd data-tecla="ArrowDown">↓</kbd>
+          <kbd data-tecla="ArrowRight">→</kbd>
+        </div>
+      </section>
+
+      <!-- Teclado numérico -->
+      <section class="numerico" aria-label="Teclado numérico">
+        <div class="grade quatro">
+          <kbd data-tecla="NumLock">Num</kbd>
+          <kbd data-tecla="NumpadDivide">/</kbd>
+          <kbd data-tecla="NumpadMultiply">*</kbd>
+          <kbd data-tecla="NumpadSubtract">-</kbd>
+          <kbd data-tecla="Numpad7">7</kbd>
+          <kbd data-tecla="Numpad8">8</kbd>
+          <kbd data-tecla="Numpad9">9</kbd>
+          <kbd data-tecla="NumpadAdd" class="alta">+</kbd>
+          <kbd data-tecla="Numpad4">4</kbd>
+          <kbd data-tecla="Numpad5">5</kbd>
+          <kbd data-tecla="Numpad6">6</kbd>
+          <kbd data-tecla="Numpad1">1</kbd>
+          <kbd data-tecla="Numpad2">2</kbd>
+          <kbd data-tecla="Numpad3">3</kbd>
+          <kbd data-tecla="NumpadEnter" class="alta">Enter</kbd>
+          <kbd data-tecla="Numpad0" class="larga">0</kbd>
+          <kbd data-tecla="NumpadDecimal">,</kbd>
+        </div>
+      </section>
+
+    </div>
+  </main>
+</body>
+<script>
+
+const teclasAtivas = new Set();
+
+// Teclas que possuem funções próprias no navegador
+const teclasBloqueadas = [
+    "F1", "F3", "F5", "F6", "F7",
+    "F10", "F11", "F12", "Tab", "AltLeft",
+    "ContextMenu", "MetaLeft", "BracketLeft", "NumpadDivide", "Backquote",
+    "IntlRo", "AltRight"
+];
+
+// Quando pressionar uma tecla
+document.addEventListener("keydown", function(event) {
+
+    // Impede algumas funções do navegador
+    if (teclasBloqueadas.includes(event.code)) {
+        event.preventDefault();
+    }
+
+    const tecla = document.querySelector(
+        `[data-tecla="${event.code}"]`
+    );
+
+    if (tecla) {
+        tecla.classList.add("ativa");
+        teclasAtivas.add(tecla);
+    }
+
+});
+
+// Quando soltar uma tecla
+document.addEventListener("keyup", function(event) {
+
+    const tecla = document.querySelector(`[data-tecla="${event.code}"]`);
+
+    if (tecla) {
+        tecla.classList.remove("ativa");
+        teclasAtivas.delete(tecla);
+    }
+
+});
+
+// Limpa todas as teclas quando a janela perde o foco
+window.addEventListener("blur", function() {
+
+    teclasAtivas.forEach(function(tecla) 
+    {
+        tecla.classList.remove("ativa");
+    });
+
+    teclasAtivas.clear();
+
+});
+
+// Limpa as teclas quando a página fica oculta
+document.addEventListener("visibilitychange", function() 
+{
+    if (document.hidden) {
+
+        teclasAtivas.forEach(function(tecla) 
+        {
+            tecla.classList.remove("ativa");
+        });
+
+        teclasAtivas.clear();
+    }
+
+});
+</script>
+
+</html>

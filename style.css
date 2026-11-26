@@ -1,0 +1,142 @@
+:root {
+    --u: 52px;               /* tamanho de uma tecla */
+    --sep: calc(var(--u) * 0.4);
+  
+    --fundo: #eef0f4;
+    --texto: #1d2330;
+    --suave: #6b7385;
+    --base: #d5d9e2;
+    --tecla: #ffffff;
+    --especial: #e6e9f0;
+    --borda: #b9bfcc;
+    --destaque: #3b6df0;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fundo: #14171e;
+      --texto: #e8ebf2;
+      --suave: #8a93a6;
+      --base: #232834;
+      --tecla: #394055;
+      --especial: #2c3345;
+      --borda: #1a1e28;
+      --destaque: #7aa2ff;
+    }
+  }
+  
+  * { box-sizing: border-box; }
+  
+  body {
+    margin: 0;
+    padding: 2rem 1rem;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: system-ui, sans-serif;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h1 { margin: 0 0 0.25rem; }
+  p  { margin: 0 0 1.5rem; color: var(--suave); }
+  
+  /* Estrutura geral */
+  .teclado {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--sep);
+    padding: var(--sep);
+    max-width: 100%;
+    overflow-x: auto;
+    background: var(--base);
+    border: 1px solid var(--borda);
+    border-radius: 16px;
+  }
+  
+  .fileira { display: flex; }
+  
+  .funcoes { margin-bottom: var(--sep); }
+  
+  .bloco { display: flex; }
+  
+  .funcoes:not(.grade) { justify-content: space-between; }
+  
+  /* Teclas */
+  kbd {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(var(--u) * var(--w, 1) - 4px);
+    height: calc(var(--u) - 4px);
+    margin: 2px;
+    background: var(--tecla);
+    border: 1px solid var(--borda);
+    border-bottom-width: 3px;
+    border-radius: 7px;
+    font: 600 0.8rem system-ui, sans-serif;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  kbd[data-shift]::before {
+    content: attr(data-shift);
+    font-size: 0.7rem;
+    color: var(--suave);
+  }
+  
+  kbd:hover { outline: 2px solid var(--destaque); outline-offset: -2px; }
+  
+  kbd:active,
+  kbd.ativa {
+    background: var(--destaque);
+    color: #fff;
+    transform: translateY(2px);
+  }
+  
+  /* Marca de referência dos dedos (F e J) */
+  kbd.guia::after {
+    content: "";
+    width: 14px;
+    height: 2px;
+    margin-top: 3px;
+    background: var(--suave);
+  }
+  
+  /* Larguras (múltiplos de --u) */
+  .w125 { --w: 1.25; }
+  .w15  { --w: 1.5; }
+  .w175 { --w: 1.75; }
+  .w2   { --w: 2; }
+  .w225 { --w: 2.25; }
+  .w75  { --w: 7.5; }
+  
+  /* Navegação e teclado numérico usam grade */
+  .grade {
+    display: grid;
+    grid-auto-rows: var(--u);
+  }
+  .grade kbd { width: auto; height: auto; }
+  
+  .tres   { grid-template-columns: repeat(3, var(--u)); }
+  .quatro { grid-template-columns: repeat(4, var(--u)); }
+  
+  .setas { margin-top: var(--u); }
+  .setas kbd[data-tecla="ArrowUp"]    { grid-column: 2; grid-row: 1; }
+  .setas kbd[data-tecla="ArrowLeft"]  { grid-column: 1; grid-row: 2; }
+  .setas kbd[data-tecla="ArrowDown"]  { grid-column: 2; grid-row: 2; }
+  .setas kbd[data-tecla="ArrowRight"] { grid-column: 3; grid-row: 2; }
+  
+  .numerico { margin-top: calc(var(--u) + var(--sep)); }
+  .alta  { grid-row: span 2; }
+  .larga { grid-column: span 2; }
+  
+  /* Telas pequenas */
+  @media (max-width: 1000px) {
+    :root { --u: 40px; }
+    kbd { font-size: 0.65rem; }
+  }
